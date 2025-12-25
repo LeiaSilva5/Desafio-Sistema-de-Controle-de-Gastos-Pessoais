@@ -1,4 +1,19 @@
 
+
+
+# Mostrar gasto médio
+def gasto_medio():
+    print("Olá,mundo")
+# Mostrar total gasto
+def total_gasto():
+    print("total gasto")
+# Listar gastos
+def list_gastos():
+    print("lista gastos")
+# Adicionar gastos
+def add_Gastos():
+    print("-- Adicionando Gastos --")
+
 # opções do menu
 def op_menu(opcao):
     if int(opcao) == 1:
