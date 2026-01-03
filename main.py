@@ -1,31 +1,34 @@
+# Globais
+lista_gastos = []
+# Função que adiciona gastos
+def add_gastos(gastos):
+    aux = True
+    while aux:
+        descricao = input('Digite uma descrição: ')
+        valor = input('Digite o valor do gasto: ')
+        categoria = input('Defina uma categoria : ')
+        quest = input('Deseja adicionar mais informação? [S] ou [N]: ')
+        info = {
+        'Descricao': descricao,
+            'Valor': valor,
+        'Categoria':categoria
+        }
+        quest = quest.upper()
+        gastos.append(info)
+        if quest == 'N':
+            aux = False
 
-
-
-# Mostrar gasto médio
-def gasto_medio():
-    print("Olá,mundo")
-# Mostrar total gasto
-def total_gasto():
-    print("total gasto")
-# Listar gastos
-def list_gastos():
-    print("lista gastos")
-# Adicionar gastos
-def add_Gastos():
-    print("-- Adicionando Gastos --")
 
 # opções do menu
 def op_menu(opcao):
     if int(opcao) == 1:
-        print('Adicionar Gastos')
+        add_gastos(lista_gastos)
     elif int(opcao) == 2:
         print('Listar gastos')
     elif int(opcao) == 3:
-        print('Listar gastos')
+        print('Mostrar gastos  total')
     elif int(opcao) == 4:
-        print('Listar gastos')
-    elif int(opcao) == 5:
-        print('Listar gastos')
+        print('Mostrar gasto médio')
     else:
         print('Opção invalida, deseja retornar par o menu inicial ? [S] [N]')
         item = input(": ")
