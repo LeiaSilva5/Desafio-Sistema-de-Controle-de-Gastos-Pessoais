@@ -1,5 +1,16 @@
 # Globais
 lista_gastos = []
+# Função que listar os gastos
+def mostrar_gastos(mostra_gastos):
+    if mostra_gastos:
+        print('-------- Lista de gastos --------')
+        for i in mostra_gastos:
+            for chave,valor in i.items():
+                print(f'{chave}:{valor}')
+            print('----------------------------------')
+    else:
+        print('--------- Ainda não existe registros  ---------')
+
 # Função que adiciona gastos
 def add_gastos(gastos):
     aux = True
@@ -24,7 +35,7 @@ def op_menu(opcao):
     if int(opcao) == 1:
         add_gastos(lista_gastos)
     elif int(opcao) == 2:
-        print('Listar gastos')
+        mostrar_gastos(lista_gastos)
     elif int(opcao) == 3:
         print('Mostrar gastos  total')
     elif int(opcao) == 4:
