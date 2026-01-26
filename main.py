@@ -1,5 +1,16 @@
 # Globais
 lista_gastos = []
+#Somar total de valores
+def soma(listas):
+    if not listas:
+        print('Nenhum item encontrado')
+    else:
+        total = sum(item['Valor'] for item in listas)
+        print('----------------------------------------------')
+        print('Resultado dos gastos adiciondos até agora')
+        print(f'Total = {total}')
+        print('----------------------------------------------')
+
 # Função que listar os gastos
 def mostrar_gastos(mostra_gastos):
     if mostra_gastos:
@@ -16,7 +27,7 @@ def add_gastos(gastos):
     aux = True
     while aux:
         descricao = input('Digite uma descrição: ')
-        valor = input('Digite o valor do gasto: ')
+        valor = int(input('Digite o valor do gasto: '))
         categoria = input('Defina uma categoria : ')
         quest = input('Deseja adicionar mais informação? [S] ou [N]: ')
         info = {
@@ -37,7 +48,7 @@ def op_menu(opcao):
     elif int(opcao) == 2:
         mostrar_gastos(lista_gastos)
     elif int(opcao) == 3:
-        print('Mostrar gastos  total')
+        soma(lista_gastos)
     elif int(opcao) == 4:
         print('Mostrar gasto médio')
     else:

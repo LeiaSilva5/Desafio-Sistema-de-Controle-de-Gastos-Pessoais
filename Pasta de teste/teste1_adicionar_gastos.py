@@ -80,3 +80,23 @@ pra isso vou precisar de funções input() e dicionarios para armazenar a inform
 # print(my_liat[2])
 
 # print(len(my_liat))
+
+
+listas = [
+    {
+        'descricao' : 'Descrição teste 1',
+        'valor' : 100,
+        'categoria' : 'Categoria teste'
+    },
+    {
+        'descricao' :'Descrição teste 1',
+        'valor' : 200,
+        'categoria' : 'Categoria teste'
+
+    }
+]
+
+for lista in listas:
+    print(lista)
+total = sum(item['valor'] for item in listas)
+print(total)
